@@ -1,0 +1,1 @@
+{"uploaded_csv_filename": "Country-data.csv", "uploaded_csv_path": "uploads\\Country-data.csv", "profile_report_path": "/home/senzmate/AutoML/html/index.html", "numerical_column_list": ["child_mort", "exports", "health", "imports", "income", "inflation", "life_expec", "total_fer", "gdpp"], "categorical_column_list": [""], "target_column_list": [""]}

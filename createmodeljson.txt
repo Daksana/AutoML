@@ -1,0 +1,107 @@
+/create_model
+.....................................................................................
+json sent to backend
+....................................................................................
+{"name":"Data1",
+"newModelName":"NewData1",
+"property":"Moisture Conductivity Analog",
+"device":"Rockland 1-D"}
+
+And 1 file is uploaded.
+
+([('data', '{"name":"Data1",
+		"newModelName":"NewData1",
+		"property":"Moisture Conductivity Analog",
+		"device":"Rockland 1-D"}')])])
+...................................................................................
+json sent from backend
+.....................................................................................
+"csvData": [
+        {
+            "Age": 22.0,
+            "Cabin": NaN,
+            "Embarked": "S",
+            "Fare": 7.25,
+            "Name": "Braund, Mr. Owen Harris",
+            "Parch": 0,
+            "PassengerId": 1,
+            "Pclass": 3,
+            "Sex": "male",
+            "SibSp": 1,
+            "Survived": 0,
+            "Ticket": "A/5 21171"
+        },
+        {
+            "Age": 38.0,
+            "Cabin": "C85",
+            "Embarked": "C",
+            "Fare": 71.2833,
+            "Name": "Cumings, Mrs. John Bradley (Florence Briggs Thayer)",
+            "Parch": 0,
+            "PassengerId": 2,
+            "Pclass": 1,
+            "Sex": "female",
+            "SibSp": 1,
+            "Survived": 1,
+            "Ticket": "PC 17599"
+        }
+],
+"nullvalue_perc": {
+        "Age": 19.865319865319865,
+        "Cabin": 77.10437710437711,
+        "Embarked": 0.22446689113355783
+    },
+"profilereportpath": "downloads/titanic.csvProfile_reportnew.html",
+"status": "success"
+}
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+/handlingnull
+--------------------------------
+json sent to backend
+
+{
+		"path":"C:/Users/xfach/.ssh/upload_filecode/titanic.csv",
+            "numerical_columnlist":["Age","Parch","Pclass","Fare"],
+            "categorical_columnlist":["Sex","Ticket"],
+            "target_column":["Survived"],
+
+            "fildata_Numerical":
+            {
+            "Removecolumn_list":"",
+            "Removerows_list":"",
+            "Replacewithna":["Fare"],
+            "Replacewithzero":["Pclass"],
+            "Replacewithmean":["Age","Parch"],
+            "Replacewithmedian":"",
+            "Replacewithmode":""
+            },
+
+            "fildata_Categorical":
+            {
+            "Removecolumn_list":["Ticket"],
+            "Removerows_list":"",
+            "Replacewithmode":["Sex"]
+            },
+            "fildata_Target":
+            {
+            "Replacewithna":"",
+            "Removerows_list":"",
+            "Replacewithmode":["Survived"]
+            }
+}
+
+/handlingnull
+--------------------------------
+json sent from backend
+
+{
+"path":"C:/Users/xfach/.ssh/upload_filecode/data_after_nullrem.csv",
+"nullvalue_perc":"",
+"status": "success"
+}
+----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+        
